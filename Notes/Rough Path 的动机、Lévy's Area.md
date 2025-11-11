@@ -1,3 +1,6 @@
+---
+{}
+---
 #SmallEssays/RoughPath 
 
 考虑这样一个带控制的微分方程

@@ -1,5 +1,5 @@
 ---
-obsidian-note-status: []
+{}
 ---
 #SmallEssays/数理统计 
 

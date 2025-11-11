@@ -1,5 +1,5 @@
 ---
-obsidian-note-status: []
+{}
 ---
 #SmallEssays/实分析 #SmallEssays/泛函分析 #SmallEssays/随机分析  #SmallEssays/BSDE  #FromDeepSeek 
 

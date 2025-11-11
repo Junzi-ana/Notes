@@ -1,3 +1,6 @@
+---
+{}
+---
 #SmallEssays/泛函分析 
 
 假设 $V$ 是一个 $\mathbb{C}$ 上的 Banach 空间，它上面还可以附加代数的结构(若不声明，总假定是**含幺的**)，从而成为一个 Banach 代数 $\mathcal{L}$，其元素之间的乘法应该满足 (广义的) Cauchy-Schwartz 不等式：
