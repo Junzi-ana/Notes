@@ -9,14 +9,14 @@ D_{n}(\omega)=\sup_{x\in \mathbb{R}}\left| \widehat{F}(x;\omega)-F(x) \right| \x
 $$
 但是是否有几乎必然收敛呢？亦如强大数定律一样，几乎必然收敛虽然不能直接得到，但它确实是成立的，可以说它是另一个基本定理。
 
-**Gelivenko-Cantelli 定理** 
+**Glivenko-Cantelli 定理** 
 $$
 D_{n}(\omega)\to0\quad \text{a.s.} 
 $$
 
 定理的证明可以参考*施利亚耶夫《概率 I》第 412 页*，我们不在其证明上多费口舌，因为我们急于更进一步。
 
-经验分布 $\widehat{F}(x;\omega)$ 是对 $\mathbb{P}(X(\omega)\leq x)$ 的估计，从而实际上是对期望 $\mathbb{E}(\mathbb{1}_{\{ X\leq x \}})$ 的估计。对于这样一个期望，我们采用的估计方式是简单的加和取平均值，记为 $\widehat{\mathbb{E}}(\mathbb{1}_{\{ X\leq x \}})$ 。现在，将示性函数换为一般的 $f$，我们发现 Gelivenko-Cantelli 定理实际上证明了对于某一族函数 $\mathcal{F}=\{ \mathbb{1}_{\{ \;\cdot\;\leq x \}} \}_{x\in \mathbb{R} }$，一致成立这样的强大数定律
+经验分布 $\widehat{F}(x;\omega)$ 是对 $\mathbb{P}(X(\omega)\leq x)$ 的估计，从而实际上是对期望 $\mathbb{E}(\mathbb{1}_{\{ X\leq x \}})$ 的估计。对于这样一个期望，我们采用的估计方式是简单的加和取平均值，记为 $\widehat{\mathbb{E}}(\mathbb{1}_{\{ X\leq x \}})$ 。现在，将示性函数换为一般的 $f$，我们发现 Glivenko-Cantelli 定理实际上证明了对于某一族函数 $\mathcal{F}=\{ \mathbb{1}_{\{ \;\cdot\;\leq x \}} \}_{x\in \mathbb{R} }$，一致成立这样的强大数定律
 $$
 \sup_{f\in \mathcal{F}} |\widehat{\mathbb{E}}f(X)-\mathbb{E}f(X)|\to0\quad \text{a.s.} 
 $$
@@ -31,7 +31,7 @@ $$
 $$
 \sup_{f\in \mathcal{F}}| \mathbb{P}_{n}f-\mathbb{P}f| \xrightarrow{\text{a.s.} \;(\mathbb{P})} 0
 $$
-则称 $\mathcal{F}$ 为**强（弱）Gelivenko-Cantelli 类**，简称 **GC 类（弱 GC 类）**。
+则称 $\mathcal{F}$ 为**强（弱）Glivenko-Cantelli 类**，简称 **GC 类（弱 GC 类）**。
 
 记 $\mathcal{S}=\{ X_{1}, \cdots,~ X_{n} \}$ 为数据集，$D_{n}(\mathcal{F})=\sup_{f\in \mathcal{F}}| \mathbb{P}_{n}f-\mathbb{P}f|$，我们接下去的推导过程主要分两部分：
 1. 证明 $D_{n}$ 集中在 $\mathbb{E}_{\mathcal{S}}(D_{n})$ 附近
@@ -65,7 +65,7 @@ $$
 $$
 再引入记号
 $$
-\mathfrak{R}_{n}(\mathcal{F})=\mathbb{E}_{\mathcal{S},\varepsilon}\left[ \sup_{f\in \mathcal{F}} \frac{1}{n}\sum^{n}_{i=1}\varepsilon _{i}f(X_{i})  \right]
+\mathfrak{R}_{n}(\mathcal{F})=\mathbb{E}_{\mathcal{S},\varepsilon} \left| \sup_{f\in \mathcal{F}} \frac{1}{n}\sum^{n}_{i=1}\varepsilon _{i}f(X_{i})  \right|   
 $$
 为函数类 $\mathcal{F}$ 的 **Rademacher 复杂度**，则利用三角不等式，得到最终的估计
 $$
@@ -82,7 +82,7 @@ $$
 现在，我们将估计 $D_{n}(\mathcal{F})$ 的问题转化为估计不依赖分布的 $\mathfrak{R}_{n}(\mathcal{F})$ 。当给定 $\mathcal{S}$ 时，$\mathfrak{R}_{n}(\mathcal{F})$ 不再依赖样本的分布，而只依赖于数据点和函数族 $\mathcal{F}$ 的内在结构，对此，我们有度量熵、组合维数等方法能够分析，碍于篇幅所限，本篇笔记在此处停笔。
 
 ---
-*Reference: 
+*Reference:*
 1. *概率（第一卷）, A. H. 施利亚耶夫*
 2. [[lecture3.pdf]]
 
