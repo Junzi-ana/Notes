@@ -14,7 +14,7 @@ $$
 $$
 \limsup_{ n \to \infty } \mathbb{P}\left( \sup_{d(f,g)<\delta} \left| \mathbb{G}_{n}f-\mathbb{G}_{n} g\right|>\varepsilon  \right) \to0,\quad \delta \to0
 $$
-这等价于 $\mathbb{G}_{n}$ 在 $\mathscr{l}^{\infty}(\mathcal{F})$ 中弱收敛到 $\mathbb{G}_{\mathbb{P}}$ 。
+这等价于 $\mathbb{G}_{n}$ 在 $L^{\infty}(\mathcal{F})$ 中弱收敛到 $\mathbb{G}_{\mathbb{P}}$ 。
 
 类似地可以通过对覆盖数的研究，来判断一个函数类是否是 Donsker 类，只不过非常复杂，在此仅做介绍。
 

@@ -1,3 +1,6 @@
+---
+{}
+---
 #SmallEssays/数理统计 
 
 在[[数理统计基本思想：似然函数、似然比|极大似然估计]]中，我们通过最大化对数似然函数得到估计；在 [[Bayes 统计：基本原理与例子|Bayes 统计]]中，我们通过最大化后验概率得到估计；在[[非参数回归：回归的原理与最优化|回归分析]]中，我们通过最小化损失函数得到估计……这些估计方法都可以被纳入到 M 估计的框架下，即通过最大化或最小化某个函数 $\mathcal{M}(X_{1}, \cdots,X_{n};\theta)$ 来得到 $\hat{\theta}$ 。当 $\mathcal{M}$ 可微且 Hesse 矩阵半负定，则可以通过取梯度得到估计方程，从而转化为 Z 估计。
@@ -10,23 +13,23 @@ $$
 
 对于这样一个 $\hat{\theta}_{n}$，我们试图从如下方面进行研究，包括
 1. $\hat{\theta}_{n}$ 是 $\theta^{*}$ 的一致估计量吗
-2. 如果是，$\hat{\theta}_{n}\to\theta ^{*}$ 的收敛速度如何估计
+2. 如果是，$\hat{\theta}_{n}\to\theta _{0}$ 的收敛速度如何估计
 3. $\hat{\theta}_{n}$ 有渐近正态性吗
 
 这三个问题会引出非常丰富的统计理论，本篇笔记只讨论第一个问题。
 
-首先，由于这是个最大化问题，倘若全局最大值点不唯一，我们自然无法通过这个 M 估计框架来捕获真值，因此 $\theta ^{*}$ 需要满足**识别性条件**
+首先，由于这是个最大化问题，倘若全局最大值点不唯一，我们自然无法通过这个 M 估计框架来捕获真值，因此 $\theta _{0}$ 需要满足**识别性条件**
 $$
-M(\theta^{*})>\sup_{\| \theta'-\theta ^{*} \| >\delta} M(\theta'),\quad \forall\;\delta>0
+M(\theta^{*})>\sup_{\| \theta'-\theta _{0} \| >\delta} M(\theta'),\quad \forall\;\delta>0
 $$
-记 $A_{n}=\{ \| \hat{\theta}_{n}-\theta ^{*} \|>\delta \}$，往证 $\mathbb{P}(A_{n})\to0$ 。在 $A_{n}$ 上，一方面由识别性条件，有
+记 $A_{n}=\{ \| \hat{\theta}_{n}-\theta _{0} \|>\delta \}$，往证 $\mathbb{P}(A_{n})\to0$ 。在 $A_{n}$ 上，一方面由识别性条件，有
 $$
-M(\theta ^{*})-M(\hat{\theta}_{n})> M(\theta^{*})-\sup_{\| \theta'-\theta ^{*} \| >\delta} M(\theta')\xlongequal{\text{def}} \varepsilon_{\delta}>0
+M(\theta _{0})-M(\hat{\theta}_{n})> M(\theta^{*})-\sup_{\| \theta'-\theta _{0} \| >\delta} M(\theta')\xlongequal{\text{def}} \varepsilon_{\delta}>0
 $$
-另一方面，依 $\hat{\theta}_{n}$ 的定义，有 $\mathbb{M}_{n}(\hat{\theta}_{n})\geq \mathbb{M}_{n}(\theta ^{*})$ ，于是
+另一方面，依 $\hat{\theta}_{n}$ 的定义，有 $\mathbb{M}_{n}(\hat{\theta}_{n})\geq \mathbb{M}_{n}(\theta _{0})$ ，于是
 $$
 \begin{align}
-M(\theta ^{*})-M(\hat{\theta}_{n})&\leq M(\theta ^{*})-\mathbb{M}_{n}(\theta ^{*})+\mathbb{M}_{n}(\hat{\theta}_{n})-M(\hat{\theta}_{n})\\&
+M(\theta _{0})-M(\hat{\theta}_{n})&\leq M(\theta _{0})-\mathbb{M}_{n}(\theta _{0})+\mathbb{M}_{n}(\hat{\theta}_{n})-M(\hat{\theta}_{n})\\&
 \leq 2\sup_{\theta \in\Theta}\left| \mathbb{M}_{n}(\theta)-M(\theta) \right| 
 \end{align}
 $$
@@ -43,9 +46,9 @@ $$
 这可以用经验过程理论来解决，只需要函数类 $\{ m(\cdot,\theta) \}_{\theta \in\Theta }$ 是 [[一致大数定律、Glivenko-Cantelli 类|GC 类]]即可，至于 GC 类的验证，则可见笔记 [[Rademacher 复杂度、度量熵]] 。于是我们证明了如下定理
 
 **定理** 对于上述 M 估计问题，若
-1. 识别性条件：真值 $\theta ^{*}$ 是 $M(\theta)$ 的唯一最大值点
+1. 识别性条件：真值 $\theta _{0}$ 是 $M(\theta)$ 的唯一最大值点
 2. 函数类 $\{ m(\cdot,\theta) \}_{\theta \in\Theta }$ 是 GC 类
-则 $\hat{\theta}_{n}$ 是 $\theta ^{*}$ 的强相合估计
+则 $\hat{\theta}_{n}$ 是 $\theta _{0}$ 的强相合估计
 
 > [!remark]-
 > 弱 GC 类对应于相合估计，GC 类对应于强相合估计，十分合理，只不过单独对弱 GC 类的判定讨论较少。

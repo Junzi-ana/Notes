@@ -1,3 +1,6 @@
+---
+{}
+---
 #SmallEssays/RoughPath 
 
 在最早时，笔记 [[Rough Path 的动机、Lévy's Area]] 中就指出了，由于 Brown 运动的轨道过于粗糙没有办法像 L-S 积分那样按路径定义随机积分，而 Itô 积分也回避了这个问题。而现如今，我们定义了 [[Rough Path 的 Chen's Relation|Rough Path]] ，也说明了 [[Brown 轨道作为 Rough Path：Kolmogorov准则|Brown 运动的轨道是 Rough Path]]，现在我们可以开始尝试解决这个问题了。

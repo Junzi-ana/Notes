@@ -1,3 +1,6 @@
+---
+{}
+---
 #SmallEssays/统计学习 
 
 在笔记 [[EM 算法：一般形式]]中指出了，我们可以用似然量的期望代替似然量，这需要我们知道隐变量的后验分布 $p(z|x)$ 。然而，尽管有 Bayes 公式，在 $Z$ 的维度较高时估计 $p(z|x)$ 也是极其困难的，因此我们尝试使用一个分布 $q(z)$ 代替 $p(z|x)$ ，这便是**变分推断**的思想。
@@ -70,8 +73,8 @@ $$
 从而优化 $Q$ 函数的过程就是抬高 ELBO 的过程。并且借用这个恒等式，我们可以非常简单地得到在笔记 [[EM 算法：a toy model]] 末尾提到的收敛性问题
 $$
 \begin{align}
-\mathscr{l}(\theta^{(n+1)})&=ELBO_{\theta^{(n)}}(\theta^{(n+1)}) +D_{KL}(\theta^{(n+1)}||\theta^{(n)})\\
-&\geq ELBO_{\theta^{(n)}}(\theta^{(n)})+0=\mathscr{l}(\theta^{(n)})
+\ell(\theta^{(n+1)})&=ELBO_{\theta^{(n)}}(\theta^{(n+1)}) +D_{KL}(\theta^{(n+1)}||\theta^{(n)})\\
+&\geq ELBO_{\theta^{(n)}}(\theta^{(n)})+0=\ell(\theta^{(n)})
 \end{align}
 
 
